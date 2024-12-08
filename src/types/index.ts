@@ -1,3 +1,5 @@
+import { Types } from "mongoose";
+
 export enum TransferType {
   Borrow,
   Settle,
@@ -12,6 +14,5 @@ export type Borrow = {
 export type Borrower = {
   name: string;
   amountOwed: number;
-  avatar: string | null;
-  borrowHistory?: Borrow[];
+  borrowHistory: Types.ObjectId[];
 };

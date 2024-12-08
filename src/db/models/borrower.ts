@@ -10,12 +10,9 @@ const BorrowerSchema = new Schema<Borrower>({
     type: Number,
     default: 0,
   },
-  avatar: {
-    type: String,
-    default: null,
-  },
   borrowHistory: {
     type: [{ type: Schema.Types.ObjectId, ref: "Borrow" }],
+    default: [],
   },
 });
 
