@@ -1,5 +1,13 @@
-function App() {
-  return <h1>Finman</h1>;
-}
+import Navbar from "./components/Navbar";
+import SideBar from "./components/SideBar";
 
-export default App;
+export default function App() {
+  return (
+    <div className="h-screen flex">
+      <SideBar />
+      <main className="flex flex-col flex-grow">
+        <Navbar />
+      </main>
+    </div>
+  );
+}
