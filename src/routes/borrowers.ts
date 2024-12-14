@@ -5,8 +5,18 @@ const borrowersRouter = Router();
 
 borrowersRouter.get("/", async (req, res) => {
   try {
-    const borrowers = await Borrower.find();
-    res.status(200).json({ borrowers });
+    const [borrowers, [borrowSummary]] = await Promise.all([
+      Borrower.find(),
+      Borrower.aggregate([
+        {
+          $group: {
+            _id: null,
+            summary: { $sum: "$amountOwed" },
+          },
+        },
+      ]),
+    ]);
+    res.status(200).json({ borrowers, summary: borrowSummary?.summary || 0 });
   } catch (err) {
     res.status(500).json({ error: (err as Error).message });
   }
