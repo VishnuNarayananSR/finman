@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const SideBar = () => {
   return (
     <aside className="w-72 bg-zinc-100 border-r-2">
@@ -8,18 +10,20 @@ const SideBar = () => {
         <ul className="m-4 flex-1 space-y-6">
           {[
             "Lendings",
-            "Lendings",
-            "Lendings",
-            "Lendings",
-            "Lendings",
-            "Lendings",
-            "Lendings",
-            "Lendings",
+            "Lendings1",
+            "Lendings2",
+            "Lendings3",
+            "Lendings4",
+            "Lendings5",
+            "Lendings6",
+            "Lendings7",
           ].map((item) => (
             <li key={item}>
-              <button className="w-full text-left p-4 font-medium text-zinc-500 hover:bg-zinc-200 rounded">
-                {item}
-              </button>
+              <Link to={item.toLowerCase().replace(" ", "-")}>
+                <button className="w-full text-left p-4 font-medium text-zinc-500 hover:bg-zinc-200 rounded">
+                  {item}
+                </button>
+              </Link>
             </li>
           ))}
         </ul>
