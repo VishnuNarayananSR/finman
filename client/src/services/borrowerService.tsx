@@ -1,10 +1,8 @@
 import apiClient from "./api";
 import { Borrower } from "../../../src/types";
+import { BorrowerGetResponse } from "../types";
 export const getBorrowers = async () => {
-  const { data } = await apiClient.get<{
-    borrowers: Borrower[];
-    summary: number;
-  }>("/borrowers");
+  const { data } = await apiClient.get<BorrowerGetResponse>("/borrowers");
   return data;
 };
 
