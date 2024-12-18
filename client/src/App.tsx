@@ -1,9 +1,10 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import SideBar from "./components/SideBar";
-import Lendings from "./components/Lendings";
-import _404 from "./components/_404";
+import Lendings from "./pages/Lendings";
+import _404 from "./pages/_404";
 import { QueryClient, QueryClientProvider } from "react-query";
+import { ReactQueryDevtools } from "react-query/devtools";
 
 export default function App() {
   const queryClient = new QueryClient({
@@ -19,7 +20,7 @@ export default function App() {
       <QueryClientProvider client={queryClient}>
         <div className="h-screen flex">
           <SideBar />
-          <main className="flex flex-col flex-grow">
+          <main className="flex flex-col w-full">
             <Navbar />
             <Routes>
               <Route path="/" element={<Lendings />} />
@@ -28,6 +29,7 @@ export default function App() {
             </Routes>
           </main>
         </div>
+        <ReactQueryDevtools></ReactQueryDevtools>
       </QueryClientProvider>
     </Router>
   );
