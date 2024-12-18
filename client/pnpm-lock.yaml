@@ -11,6 +11,9 @@ importers:
       '@nextui-org/react':
         specifier: ^2.6.5
         version: 2.6.5(@types/react@18.3.14)(framer-motion@11.13.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.16)
+      axios:
+        specifier: ^1.7.9
+        version: 1.7.9
       framer-motion:
         specifier: ^11.13.3
         version: 11.13.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -20,6 +23,9 @@ importers:
       react-dom:
         specifier: ^18.3.1
         version: 18.3.1(react@18.3.1)
+      react-query:
+        specifier: ^3.39.3
+        version: 3.39.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react-router-dom:
         specifier: ^7.0.2
         version: 7.0.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -45,9 +51,6 @@ importers:
       autoprefixer:
         specifier: ^10.4.20
         version: 10.4.20(postcss@8.4.49)
-      axios:
-        specifier: ^1.7.9
-        version: 1.7.9
       eslint:
         specifier: ^9.15.0
         version: 9.16.0(jiti@1.21.6)
@@ -63,9 +66,6 @@ importers:
       postcss:
         specifier: ^8.4.49
         version: 8.4.49
-      react-query:
-        specifier: ^3.39.3
-        version: 3.39.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react-query-devtools:
         specifier: ^2.6.3
         version: 2.6.3(react-query@3.39.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)

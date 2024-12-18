@@ -4,6 +4,10 @@
 .title {
   @apply font-semibold text-2xl;
 }
+
+.card {
+  @apply border rounded-large shadow-medium;
+}
 :root {
   font-family: Inter;
   /* line-height: 1.5;
